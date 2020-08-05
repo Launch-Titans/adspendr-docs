@@ -22,6 +22,39 @@
     <p>
       how to set a nested object
     </p>
+    <p>
+      C - CREATE
+      <br />
+      <small
+        >When defining a create route, make sure you start by doing the Redux
+        constants (CRUD for all). The route itself should create the project and
+        return any projects that exist (no point in wasting the request)
+      </small>
+    </p>
+    <p>
+      R - READ
+      <br />
+      <small
+        >All routes should basically do this, but this one only contains the
+        `read`. Use Mongo `.find()`</small
+      >
+    </p>
+    <p>
+      U - UPDATE
+      <small
+        >This route should update an existing document (often named _entity in
+        the UI) and return all documents for the account</small
+      >
+      <br />
+    </p>
+    <p>
+      D - DELETE
+      <small
+        >This route should delete an existing document (often named _entity in
+        the UI) and return all documents for the account</small
+      >
+      <br />
+    </p>
     <!--[if lt IE 7]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please
