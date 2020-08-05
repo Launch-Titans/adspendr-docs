@@ -43,7 +43,13 @@
       U - UPDATE
       <small
         >This route should update an existing document (often named _entity in
-        the UI) and return all documents for the account</small
+        the UI) and return all documents for the account. It's okay to use
+        `findOneAndReplace` <i>AS LONG AS the data is not sensitive!</i> For
+        example, you wouldn't want to use `findOneAndReplace` on an account,
+        because the user could edit the account using the browser's cookies and
+        change a variable that would, for example, set an access level or
+        something like that that the user would otherwise have to pay
+        for.</small
       >
       <br />
     </p>
@@ -58,7 +64,7 @@
     <p>
       Basically, all routes should return a READ unless they're connected to a
       socket (in which case you have to emit a socket event, because there's no
-      sense in wasting the request.
+      sense in wasting the response.
     </p>
     <!--[if lt IE 7]>
       <p class="browsehappy">
