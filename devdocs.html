@@ -55,6 +55,11 @@
       >
       <br />
     </p>
+    <p>
+      Basically, all routes should return a READ unless they're connected to a
+      socket (in which case you have to emit a socket event, because there's no
+      sense in wasting the request.
+    </p>
     <!--[if lt IE 7]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please
